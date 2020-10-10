@@ -1,0 +1,12 @@
+---
+- hosts: windows
+  gather_facts: False
+  tasks:
+  - name: Run python code
+    win_shell: C:\Users\Administrator\AppData\Local\Programs\Python\Python38\python.exe C:\Users\Administrator\Downloads\GetInventory-master\GetInventory-master\main.py
+    args:
+      chdir: C:\Users\Administrator\Downloads\GetInventory-master\GetInventory-master\
+
+  - debug:
+      msg:
+      - "END OF LIFE SHOW COMMANDS RUN SUCCESSFULLY"
